@@ -1,0 +1,45 @@
+author: delta-things
+type: lib
+description: A LoRaWAN on ttn-esp32
+version: 1.0
+
+sources:
+  - src
+  - src/aes
+  - src/hal
+  - src/lmic
+filesystem:
+  - fs
+includes:
+  - include
+config_schema:
+  - ["ttn", "o", {title: "ThingsNetwork Application Settings"}]
+  - ["ttn.deveui", "s", "0000000000000000", {title: "Device EUI 8-byte"}]
+  - ["ttn.appeui", "s", "0000000000000000", {title: "Application EUI 8-byte"}]
+  - ["ttn.appkey", "s", "00000000000000000000000000000000", {title: "Application Key 16-byte"}]
+  - ["ttn.dma_chan", "i", -1, {title: "DMA Channel"}]
+  - ["ttn.nss_pin", "i", -1, {title: "NSS GPIO pin"}]
+  - ["ttn.rst_pin", "i", -1, {title: "RESET GPIO pin"}]
+  - ["ttn.dio0_pin", "i", -1, {title: "DIO0 GPIO pin"}]
+  - ["ttn.dio1_pin", "i", -1, {title: "DIO1 GPIO pin"}]
+  - ["ttn.rxtx_pin", "i", -1, {title: "RxTx GPIO pin"}]
+  - ["ttn.txinterval", "i", -1, {title: "Data Transmission Interval"}]
+  - ["ttn.deveui", "s", "009C9A2367993051"]
+  - ["ttn.appeui", "s", "70B3D57ED0029D1E"]
+  - ["ttn.appkey", "s", "051AE5A180C3DB5D3DD729C0C6D7EA91"]
+  - ["ttn.dma_chan", "i", 1]
+  - ["ttn.rxtx_pin", "i", 0xff]
+  - ["ttn.nss_pin", "i", 15]
+  - ["ttn.rst_pin", "i", 27]
+  - ["ttn.dio0_pin", "i", 32]
+  - ["ttn.dio1_pin", "i", 33]
+  - ["ttn.txinterval", "i", 30]
+
+libs:
+  - origin: https://github.com/delta-things/arduino-compat
+  - origin: https://github.com/delta-things/arduino-spi
+
+tags:
+  - c
+
+manifest_version: 2017-09-29
