@@ -36,8 +36,8 @@ config_schema:
   - ["ttn.txinterval", "i", 30]
 
 libs:
-  - origin: https://github.com/delta-things/arduino-compat
-  - origin: https://github.com/delta-things/arduino-spi
+  - origin: https://github.com/mongoose-os-libs/arduino-compat
+  - origin: https://github.com/mongoose-os-libs/arduino-spi
 
 tags:
   - c
