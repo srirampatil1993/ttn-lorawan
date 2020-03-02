@@ -19,7 +19,7 @@
 using lmic_pinmap = Arduino_LMIC::HalPinmap_t;
 
 // similarly, we need to disclose NUM_DIO and LMIC_UNUSED_PIN
-static const int NUM_DIO = lmic_pinmap::NUM_DIO;
+static const int NUM_DIO = lmic_pinmap::NUM_DIO;         
 
 // Use this for any unused pins.
 const u1_t LMIC_UNUSED_PIN = lmic_pinmap::UNUSED_PIN;

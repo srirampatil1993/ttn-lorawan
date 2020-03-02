@@ -440,11 +440,12 @@ void hal_failed (const char *file, u2_t line) {
     }
 
 #if defined(LMIC_FAILURE_TO)
-    LMIC_FAILURE_TO.println("FAILURE ");
-    LMIC_FAILURE_TO.print(file);
-    LMIC_FAILURE_TO.print(':');
-    LMIC_FAILURE_TO.println(line);
-    LMIC_FAILURE_TO.flush();
+    //LMIC_FAILURE_TO.println("FAILURE ");
+    //LMIC_FAILURE_TO.print(file);
+   // LMIC_FAILURE_TO.print(':');
+   // LMIC_FAILURE_TO.println(line);
+   // LMIC_FAILURE_TO.flush();
+   LL(LMIC_FAILURE_TO,("file:%sline:%d",file,line);
 #endif
 
     hal_disableIRQs();
