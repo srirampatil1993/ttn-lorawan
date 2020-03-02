@@ -155,8 +155,8 @@ static void hal_io_check() {
 // SPI
 
 static void hal_spi_init () {
-    //SPI.begin();
-     SPI.begin(14, 12, 13, 15);
+    SPI.begin();
+     //SPI.begin(14, 12, 13, 15);
 }
 
 static void hal_spi_trx(u1_t cmd, u1_t* buf, size_t len, bit_t is_read) {
