@@ -1,5 +1,6 @@
 #ifndef _lmic_config_h_
 #define _lmic_config_h_
+#include "mgos.h"
 
 // In the original LMIC code, these config values were defined on the
 // gcc commandline. Since Arduino does not allow easily modifying the
